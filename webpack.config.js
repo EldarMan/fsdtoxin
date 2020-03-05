@@ -1,6 +1,12 @@
 const path = require("path");
+const fs = require("fs");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+const pagesDir = `${path.join(__dirname, "src/pages")}`;
+const pages = fs
+  .readdirSync(pagesDir)
+  .filter(filename => filename.endsWith(".pug"));
 
 module.exports = {
   mode: "development",
@@ -53,8 +59,21 @@ module.exports = {
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: ["file-loader"]
+      },
+      {
+        test: /\.pug$/,
+        use: ["pug-loader"]
       }
     ]
   },
-  plugins: [new HtmlWebpackPlugin(), new MiniCssExtractPlugin()]
+  plugins: [
+    ...pages.map(
+      page =>
+        new HtmlWebpackPlugin({
+          template: `${pagesDir}/${page}`,
+          filename: `./${page.replace(/\.pug/, ".html")}`
+        })
+    ),
+    new MiniCssExtractPlugin()
+  ]
 };
