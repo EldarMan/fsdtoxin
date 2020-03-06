@@ -30,7 +30,11 @@ module.exports = {
   },
   devtool: "inline-source-map",
   devServer: {
-    contentBase: "./dist"
+    contentBase: "./dist",
+    overlay: {
+      warnings: true,
+      errors: true
+    }
   },
   module: {
     rules: [
@@ -43,6 +47,10 @@ module.exports = {
             presets: ["@babel/preset-env"]
           }
         }
+      },
+      {
+        test: /\.pug$/,
+        use: ["pug-loader"]
       },
       {
         test: /\.css$/,
@@ -59,10 +67,6 @@ module.exports = {
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: ["file-loader"]
-      },
-      {
-        test: /\.pug$/,
-        use: ["pug-loader"]
       }
     ]
   },
