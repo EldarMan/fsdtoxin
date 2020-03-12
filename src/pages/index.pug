@@ -4,4 +4,11 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Toxin | UI Kit
-  body.Page
+  body.page
+
+    include ../components/field/field.pug
+
+    .form-elements
+      +field()(type='text' placeholder='Email')
+      +field('dropdown')(type='text' placeholder='Email')
+      +field('subscribe')(type='text' placeholder='Email')
