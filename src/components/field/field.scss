@@ -17,13 +17,19 @@ $fieldHeight: 42px;
     font-weight: normal;
     font-size: 14px;
     line-height: $fieldHeight;
+    min-width: 0;
+    width: 100%;
     margin-left: 15px;
     border: none;
   }
   &__btn {
+    flex-shrink: 0;
+    flex-grow: 0;
     display: block;
     width: ($fieldHeight);
     height: ($fieldHeight);
+    border: none;
+    background-color: transparent;
 
     &_dropdown {
       position: relative;

@@ -3,5 +3,5 @@ mixin field(modifier)
   div(class=modifier ? `${baseClass} ${baseClass}_${modifier}` : baseClass)
     input(class=`${baseClass}__input`)&attributes(attributes)
     if (modifier)
-    div(class=`${baseClass}__btn ${baseClass}__btn_${modifier}`)
+    button(class=`${baseClass}__btn ${baseClass}__btn_${modifier}`)
       
