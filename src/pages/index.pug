@@ -13,6 +13,7 @@ html(lang="en")
     include ../components/like/like.pug
     include ../components/bullet/bullet.pug
     include ../components/rate/rate.pug
+    include ../components/button/button.pug
 
     .form-elements
       .ui__column
@@ -69,3 +70,10 @@ html(lang="en")
         +rate('4')
         +bullet('Нельзя с питомцами')
         +bullet('Без вечеринок и мероприятий')
+        +button('clear')
+        +button('apply','apply')
+        +button('sign up', 'signup')
+        +button('sign in', 'signin')
+        +button('sign up', 'signup')(disabled)
+        +button('sign in', 'signin')(disabled)
+        +button('order','order')

@@ -9,3 +9,4 @@ import "./components/toggle/toggle";
 import "./components/like/like";
 import "./components/bullet/bullet";
 import "./components/rate/rate";
+import "./components/button/button";

@@ -1,0 +1,79 @@
+.button {
+  color: rgba(31, 32, 65, 0.5);
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  border: none;
+  background-color: transparent;
+
+  &_apply {
+    color: #bc9cff;
+  }
+
+  &_signup {
+    color: #fff;
+    line-height: 44px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 22px;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+
+    &[disabled] {
+      background: linear-gradient(
+        180deg,
+        rgba(187, 156, 255, 0.5) 0%,
+        rgba(139, 165, 249, 0.5) 100%
+      );
+    }
+  }
+  &_signin {
+    color: #bc9cff;
+    position: relative;
+    line-height: 44px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 22px;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      right: 2px;
+      bottom: 2px;
+      border-radius: 22px;
+      background-color: #fff;
+    }
+    .button__label {
+      position: relative;
+      z-index: 1;
+    }
+    &[disabled] {
+      background: linear-gradient(
+        180deg,
+        rgba(187, 156, 255, 0.5) 0%,
+        rgba(139, 165, 249, 0.5) 100%
+      );
+    }
+  }
+  &_order {
+    display: block;
+    width: 100%;
+    color: #fff;
+    line-height: 44px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 22px;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    &[disabled] {
+      background: linear-gradient(
+        180deg,
+        rgba(187, 156, 255, 0.5) 0%,
+        rgba(139, 165, 249, 0.5) 100%
+      );
+    }
+  }
+}

@@ -1,0 +1,4 @@
+mixin button(label, modifier)
+  - const baseClass = 'button'
+  button(class=modifier? `${baseClass} ${baseClass}_${modifier}` : `${baseClass}`)&attributes(attributes)
+    span(class=`${baseClass}__label`)=label
