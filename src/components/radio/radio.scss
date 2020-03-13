@@ -1,0 +1,44 @@
+.radio {
+  color: rgba(31, 32, 65, 0.5);
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.29;
+
+  &__label {
+    padding-left: 10px;
+  }
+  &__mark {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    vertical-align: bottom;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 12px;
+      width: 12px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      transform: translate(-50%, -50%);
+      transition: 0.1s;
+      opacity: 0;
+    }
+  }
+  &__input {
+    display: none;
+  }
+  &__input:checked ~ &__mark {
+    border-color: #bc9cff;
+    &::after {
+      opacity: 1;
+    }
+  }
+}

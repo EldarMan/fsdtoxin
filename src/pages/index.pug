@@ -8,6 +8,7 @@ html(lang="en")
 
     include ../components/field/field.pug
     include ../components/checkbox/checkbox.pug
+    include ../components/radio/radio.pug
 
     .form-elements
       .ui__column
@@ -54,3 +55,5 @@ html(lang="en")
       .ui__column
         +checkbox('Можно курить')
         +checkbox('Широкий коридор','Ширина коридоров в номере не менее 91 см')
+        +radio('Мужчина')(name='sex')
+        +radio('Женщина')(name='sex')
