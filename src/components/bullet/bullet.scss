@@ -1,0 +1,21 @@
+.bullet {
+  color: rgba(31, 32, 65, 0.75);
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.29;
+
+  &__label {
+    padding-left: 10px;
+  }
+  &__mark {
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(31, 32, 65, 0.25);
+    vertical-align: baseline;
+  }
+}

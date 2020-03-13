@@ -1,0 +1,6 @@
+mixin bullet(label)
+  - let baseClass = 'bullet';
+  label(class=`${baseClass}`)
+    span(class=`${baseClass}__mark`)
+    span(class=`${baseClass}__label`)=label
+      
