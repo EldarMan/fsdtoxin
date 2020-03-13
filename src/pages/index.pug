@@ -11,6 +11,7 @@ html(lang="en")
     include ../components/radio/radio.pug
     include ../components/toggle/toggle.pug
     include ../components/like/like.pug
+    include ../components/rate/rate.pug
 
     .form-elements
       .ui__column
@@ -63,3 +64,5 @@ html(lang="en")
         +toggle('Получать спецпредложения')
         +like('2')
         +like('12')(checked=true)
+        +rate('5')
+        +rate('4')

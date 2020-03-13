@@ -1,0 +1,9 @@
+mixin rate(stars)
+  ul.rate
+    - for (let i = 0; i < 5; i++)
+      if i < stars
+        li.rate__star.rate__star_checked
+          include ./starChecked.svg
+      else
+        li.rate__star
+          include ./star.svg
