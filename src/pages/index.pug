@@ -4,12 +4,53 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Toxin | UI Kit
-  body.page
+  body.page.ui
 
     include ../components/field/field.pug
+    include ../components/checkbox/checkbox.pug
 
     .form-elements
-      +field()(type='text' placeholder='Email')
-      +field('dropdown')(type='text' placeholder='Email')
-      +field('subscribe')(type='text' placeholder='Email')
-      +field('date')(type='text' placeholder='Email')
+      .ui__column
+        .ui__container
+          .ui__label
+            .h3 Text field
+            .default Default
+          +field()(type='text' placeholder='Email')
+        .ui__container
+          .ui__label
+            .h3 Text field
+            .default Hover/Focus
+          +field()(type='text' placeholder='Email')
+        .ui__container
+          .ui__label
+            .h3 Dropdown
+            .default Default
+          +field('dropdown')(type='text' placeholder='Сколько гостей')
+        .ui__container
+          .ui__label
+            .h3 Masked text field
+            .default Default
+          +field()(type='text' placeholder='ДД.ММ.ГГГГ')
+        .ui__container.ui__row
+          .ui__date
+            .ui__label
+              .h3 Date Dropdown
+            +field('date')(type='text' placeholder='ДД.ММ.ГГГГ')
+          .ui__date
+            .ui__label
+              .h3 Date Dropdown
+            +field('date')(type='text' placeholder='ДД.ММ.ГГГГ')
+      .ui__column.ui__column_small
+        .ui__container
+          .ui__label
+            .h3 Filter Date Dropdown
+            .default Default
+          +field('date')(type='text' placeholder='ДД.МММ - ДД.МММ')
+        .ui__container
+          .ui__label
+            .h3 Subscibtion Text Field
+            .default Default
+          +field('subscribe')(type='text' placeholder='Email')
+      .ui__column
+        +checkbox('Можно курить')
+        +checkbox('Широкий коридор','Ширина коридоров в номере не менее 91 см')

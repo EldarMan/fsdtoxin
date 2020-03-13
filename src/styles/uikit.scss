@@ -1,0 +1,25 @@
+.ui {
+  padding: 140px;
+  &__column {
+    width: 320px;
+
+    &_small {
+      width: 267px;
+    }
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  &__container {
+    margin-bottom: 20px;
+  }
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+}
