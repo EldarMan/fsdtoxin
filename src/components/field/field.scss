@@ -56,6 +56,31 @@ $fieldHeight: 42px;
         transform: translateY(-50%) translateX(2px) rotate(45deg);
       }
     }
+    &_date {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        width: 8px;
+        height: 2px;
+        background-color: #8f90a0;
+        transform: translateY(-50%) translateX(-2px) rotate(-45deg);
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        display: block;
+        width: 8px;
+        height: 2px;
+        background-color: #8f90a0;
+        transform: translateY(-50%) translateX(2px) rotate(45deg);
+      }
+    }
     &_subscribe {
       background-image: url("./arrow.svg");
       background-repeat: no-repeat;
