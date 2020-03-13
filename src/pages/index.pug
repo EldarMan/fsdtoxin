@@ -9,6 +9,7 @@ html(lang="en")
     include ../components/field/field.pug
     include ../components/checkbox/checkbox.pug
     include ../components/radio/radio.pug
+    include ../components/toggle/toggle.pug
 
     .form-elements
       .ui__column
@@ -57,3 +58,5 @@ html(lang="en")
         +checkbox('Широкий коридор','Ширина коридоров в номере не менее 91 см')
         +radio('Мужчина')(name='sex')
         +radio('Женщина')(name='sex')
+        +toggle('Получать уведомления')
+        +toggle('Получать спецпредложения')

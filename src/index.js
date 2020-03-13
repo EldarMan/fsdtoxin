@@ -5,3 +5,4 @@ import "./styles/styles";
 import "./components/field/field";
 import "./components/checkbox/checkbox";
 import "./components/radio/radio";
+import "./components/toggle/toggle";

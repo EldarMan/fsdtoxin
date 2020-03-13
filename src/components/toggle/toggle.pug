@@ -1,0 +1,7 @@
+mixin toggle(label)
+  - let baseClass = 'toggle';
+  label(class=`${baseClass}`)
+    input(class=`${baseClass}__input` type='checkbox')&attributes(attributes)
+    span(class=`${baseClass}__mark`)
+    span(class=`${baseClass}__label`)=label
+      
