@@ -1,0 +1,9 @@
+mixin like(num)
+  - let baseClass = 'like';
+  label(class=`${baseClass}`)
+    input(class=`${baseClass}__input` type='checkbox')&attributes(attributes)
+    span(class=`${baseClass}__mark`)
+      div(class=`${baseClass}__icon`)
+        include ./like.svg
+      span(class=`${baseClass}__label`)=num
+      
