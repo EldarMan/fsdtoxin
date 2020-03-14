@@ -20,7 +20,7 @@
     border-radius: 22px;
     background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
 
-    &[disabled] {
+    &:hover {
       background: linear-gradient(
         180deg,
         rgba(187, 156, 255, 0.5) 0%,
@@ -51,7 +51,7 @@
       position: relative;
       z-index: 1;
     }
-    &[disabled] {
+    &:hover {
       background: linear-gradient(
         180deg,
         rgba(187, 156, 255, 0.5) 0%,
@@ -68,7 +68,7 @@
     padding-right: 15px;
     border-radius: 22px;
     background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-    &[disabled] {
+    &:hover {
       background: linear-gradient(
         180deg,
         rgba(187, 156, 255, 0.5) 0%,
