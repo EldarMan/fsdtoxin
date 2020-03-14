@@ -3,7 +3,7 @@ mixin comment(obj)
   - let baseClass = 'comment';
   div(class=`${baseClass}`)
     div(class=`${baseClass}__aside`)
-      div(class=`${baseClass}__avatar`)
+      img(class=`${baseClass}__avatar` src=obj.avatar)
       +like(obj.likes)
     div(class=`${baseClass}__container`)
       div(class=`${baseClass}__author`)=obj.author
