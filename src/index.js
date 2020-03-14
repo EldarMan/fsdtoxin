@@ -11,3 +11,4 @@ import "./components/bullet/bullet";
 import "./components/rate/rate";
 import "./components/button/button";
 import "./components/comment/comment";
+import "./components/advantage/advantage";

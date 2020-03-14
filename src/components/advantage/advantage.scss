@@ -1,0 +1,19 @@
+.advantage {
+  color: rgba(31, 32, 65, 0.75);
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+
+  &__label {
+    font-weight: bold;
+  }
+  &__icon {
+    width: 48px;
+    height: 48px;
+  }
+}

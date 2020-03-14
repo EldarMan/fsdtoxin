@@ -1,0 +1,8 @@
+mixin advantage(obj)
+  - let baseClass = 'advantage';
+  label(class=`${baseClass}`)
+    img(class=`${baseClass}__icon` src=obj.icon)
+    div(class=`${baseClass}__container`)
+      p(class=`${baseClass}__label`)=obj.label
+      p(class=`${baseClass}__text`)=obj.text
+      
