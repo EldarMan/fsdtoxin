@@ -1,0 +1,13 @@
+include ../like/like.pug
+mixin comment(obj)
+  - let baseClass = 'comment';
+  div(class=`${baseClass}`)
+    div(class=`${baseClass}__aside`)
+      div(class=`${baseClass}__avatar`)
+      +like(obj.likes)
+    div(class=`${baseClass}__container`)
+      div(class=`${baseClass}__author`)=obj.author
+      div(class=`${baseClass}__date`)=obj.date
+      div(class=`${baseClass}__text`)=obj.text
+    
+      

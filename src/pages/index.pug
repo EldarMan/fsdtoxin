@@ -14,6 +14,7 @@ html(lang="en")
     include ../components/bullet/bullet.pug
     include ../components/rate/rate.pug
     include ../components/button/button.pug
+    include ../components/comment/comment.pug
 
     .form-elements
       .ui__column
@@ -77,3 +78,7 @@ html(lang="en")
         +button('sign up', 'signup')(disabled)
         +button('sign in', 'signin')(disabled)
         +button('order','order')
+        +comment({author: 'Мурад Сарафанов',
+                  date: '5 дней назад',
+                  text:'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+                  likes: '2'})
