@@ -16,6 +16,7 @@ html(lang="en")
     include ../components/button/button.pug
     include ../components/comment/comment.pug
     include ../components/advantage/advantage.pug
+    include ../components/linkList/linkList.pug
 
     .form-elements
       .ui__column
@@ -85,3 +86,4 @@ html(lang="en")
                   likes: '2',
                   avatar:require('../components/comment/Avatar1.png').default})
         +advantage({label:'Комфорт',text:'Шумопоглощающие стены',icon: require('../components/advantage/Comfort.svg').default})
+        +linkList({list:[{name: 'О нас', link: '#'},{name: 'Бронировние', link: '#'},{name: 'Соглашение', link: '#'}]})
