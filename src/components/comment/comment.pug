@@ -4,7 +4,7 @@ mixin comment(obj)
   div(class=`${baseClass}`)
     div(class=`${baseClass}__aside`)
       img(class=`${baseClass}__avatar` src=obj.avatar)
-      +like(obj.likes)
+      +like({num: obj.likes})
     div(class=`${baseClass}__container`)
       div(class=`${baseClass}__author`)=obj.author
       div(class=`${baseClass}__date`)=obj.date
