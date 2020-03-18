@@ -1,7 +1,7 @@
-mixin field(modifier)
+mixin field(obj)
   - let baseClass = 'field';
-  div(class=modifier ? `${baseClass} ${baseClass}_${modifier}` : baseClass)
+  div(class=(obj.modifier) ? `${baseClass} ${baseClass}_${obj.modifier}` : `${baseClass}`)
     input(class=`${baseClass}__input`)&attributes(attributes)
-    if (modifier)
-    button(class=`${baseClass}__btn ${baseClass}__btn_${modifier}`)
+    if (obj.modifier)
+    button(class=`${baseClass}__btn ${baseClass}__btn_${obj.modifier}`)
       

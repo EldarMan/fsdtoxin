@@ -1,9 +1,9 @@
-mixin checkbox(label,text)
+mixin checkbox(obj)
   - let baseClass = 'checkbox';
   label(class=`${baseClass}`)
     input(class=`${baseClass}__input` type='checkbox')&attributes(attributes)
     span(class=`${baseClass}__mark`)
-    span(class=text? `${baseClass}__label ${baseClass}__label_rich` : `${baseClass}__label`)=label
-    if (text)
-    p(class=`${baseClass}__text`)=text
+    span(class=obj.text? `${baseClass}__label ${baseClass}__label_rich` : `${baseClass}__label`)=obj.label
+    if (obj.text)
+    p(class=`${baseClass}__text`)=obj.text
       

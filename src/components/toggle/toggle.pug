@@ -1,7 +1,7 @@
-mixin toggle(label)
+mixin toggle(obj)
   - let baseClass = 'toggle';
   label(class=`${baseClass}`)
     input(class=`${baseClass}__input` type='checkbox')&attributes(attributes)
     span(class=`${baseClass}__mark`)
-    span(class=`${baseClass}__label`)=label
+    span(class=`${baseClass}__label`)=obj.label
       

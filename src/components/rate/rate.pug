@@ -1,7 +1,7 @@
-mixin rate(stars)
+mixin rate(obj)
   ul.rate
     - for (let i = 0; i < 5; i++)
-      if i < stars
+      if i < obj.num
         li.rate__star.rate__star_checked
           include ./starChecked.svg
       else
