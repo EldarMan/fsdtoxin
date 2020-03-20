@@ -13,3 +13,4 @@ import "./components/button/button";
 import "./components/comment/comment";
 import "./components/advantage/advantage";
 import "./components/linkList/linkList";
+import "./plugins/datepicker/datepicker";
