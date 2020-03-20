@@ -1,0 +1,187 @@
+$cellWidth: 40px;
+$cellHeight: 40px;
+
+.datepicker {
+  display: none;
+  width: 320px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  &_active {
+    display: block;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1f2041;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &__btn {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    background-image: url("./arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    &_prev {
+      transform: rotate(180deg);
+    }
+  }
+  &__grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__day {
+    width: $cellWidth;
+    height: $cellHeight;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #bc9cff;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  &__date {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $cellWidth;
+    height: $cellHeight;
+    color: rgba(31, 32, 65, 0.5);
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    border-radius: 50%;
+    &_today {
+      color: #fff;
+      font-weight: bold;
+      background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+    }
+    &_prev-month {
+      color: rgba(31, 32, 65, 0.25);
+    }
+    &_next-month {
+      color: rgba(31, 32, 65, 0.25);
+    }
+    &_selected {
+      color: #fff;
+      font-weight: bold;
+      background: linear-gradient(
+        180deg,
+        rgba(187, 156, 255, 1) 0%,
+        rgba(139, 165, 249, 1) 100%
+      );
+    }
+    &_in-range {
+      background: linear-gradient(
+        180deg,
+        rgba(187, 156, 255, 0.25) 0%,
+        rgba(139, 165, 249, 0.25) 100%
+      );
+      border-radius: 0;
+      &:nth-child(2n) {
+        background: linear-gradient(
+          180deg,
+          rgba(139, 165, 249, 0.25) 0,
+          rgba(187, 156, 255, 0.25) 100%
+        );
+      }
+    }
+    &_from {
+      position: relative;
+      color: #fff;
+      font-weight: bold;
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      &::after {
+        position: absolute;
+        content: "";
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 50% 0 0 50%;
+        background: linear-gradient(
+          180deg,
+          rgba(187, 156, 255, 0.25) 0%,
+          rgba(139, 165, 249, 0.25) 100%
+        );
+      }
+    }
+    &_to {
+      position: relative;
+      color: #fff;
+      font-weight: bold;
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      &::after {
+        position: absolute;
+        content: "";
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 0 50% 50% 0;
+        background: linear-gradient(
+          180deg,
+          rgba(187, 156, 255, 0.25) 0%,
+          rgba(139, 165, 249, 0.25) 100%
+        );
+      }
+    }
+    &:hover {
+      font-weight: bold;
+      background: linear-gradient(
+        180deg,
+        rgba(187, 156, 255, 0.25) 0%,
+        rgba(139, 165, 249, 0.25) 100%
+      );
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    margin-top: 20px;
+  }
+  &__clear {
+    cursor: pointer;
+    color: rgba(31, 32, 65, 0.5);
+  }
+  &__accept {
+    cursor: pointer;
+    color: #bc9cff;
+  }
+}
