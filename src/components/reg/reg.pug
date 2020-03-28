@@ -1,3 +1,4 @@
+include ../label/label.pug
 include ../field/field.pug
 include ../radio/radio.pug
 include ../toggle/toggle.pug
@@ -12,11 +13,9 @@ mixin reg(obj)
       div(class=`${baseClass}__sex`)
         +radio({label:'Мужчина'})(name='sex')
         +radio({label:'Женщина'})(name='sex')
-    label(class=`${baseClass}__container`) 
-      p(class=`${baseClass}__label`) Дата рождения
+    +label({label: 'Дата рождения'})(class=`${baseClass}__container`)
       +field({})(type='text' placeholder='ДД.ММ.ГГГГ')
-    label(class=`${baseClass}__container`) 
-      p(class=`${baseClass}__label`) Данные для входа в сервис
+    +label({label: 'Данные для входа в сервис'})(class=`${baseClass}__container`)
       div(class=`${baseClass}__fields`) 
         +field({})(type='text' placeholder='Email')
         +field({})(type='password' placeholder='Пароль')

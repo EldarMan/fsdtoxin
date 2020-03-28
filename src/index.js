@@ -2,6 +2,7 @@
 import "./styles/styles";
 
 // --- Components import ---
+import "./components/label/label";
 import "./components/header/header";
 import "./components/footer/footer";
 import "./components/user/user";
@@ -18,4 +19,6 @@ import "./components/advantage/advantage";
 import "./components/linkList/linkList";
 import "./components/login/login";
 import "./components/reg/reg";
+import "./components/finder/finder";
+import "./components/orderer/orderer";
 import "./plugins/datepicker/datepicker";

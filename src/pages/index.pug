@@ -6,6 +6,7 @@ html(lang="en")
     title Toxin | UI Kit
   body.page.ui
 
+    include ../components/label/label.pug
     include ../components/header/header.pug
     include ../components/footer/footer.pug
     include ../components/user/user.pug
@@ -22,49 +23,31 @@ html(lang="en")
     include ../components/linkList/linkList.pug
     include ../components/login/login.pug
     include ../components/reg/reg.pug
+    include ../components/finder/finder.pug
+    include ../components/orderer/orderer.pug
 
     .form-elements
       .ui__column
-        .ui__container
-          .ui__label
-            .h3 Text field
-            .default Default
+        +label({label: 'Text field', default: 'Default'})
           +field({})(type='text' placeholder='Email')
-        .ui__container
-          .ui__label
-            .h3 Text field
-            .default Hover/Focus
+        +label({label: 'Text field', default: 'Default'})
           +field({})(type='text' placeholder='Email')
-        .ui__container
-          .ui__label
-            .h3 Dropdown
-            .default Default
+        +label({label: 'Text field', default: 'Default'})
           +field({modifier:'dropdown'})(type='text' placeholder='Сколько гостей')
-        .ui__container
-          .ui__label
-            .h3 Masked text field
-            .default Default
+        +label({label: 'Text field', default: 'Default'})
           +field({})(type='text' placeholder='ДД.ММ.ГГГГ')
         .ui__container.ui__row
-          .ui__date
-            .ui__label
-              .h3 Date Dropdown
+          +label({label: 'Text field', default: 'Default'})
             +field({modifier: 'date'})(type='text' placeholder='ДД.ММ.ГГГГ')
-          .ui__date
-            .ui__label
-              .h3 Date Dropdown
+          +label({label: 'Text field', default: 'Default'})
             +field({modifier: 'date'})(type='text' placeholder='ДД.ММ.ГГГГ')
       .ui__column.ui__column_small
         .ui__container
-          .ui__label
-            .h3 Filter Date Dropdown
-            .default Default
-          +field({modifier: 'date'})(type='text' placeholder='ДД.МММ - ДД.МММ')
+          +label({label: 'Text field', default: 'Default'})
+            +field({modifier: 'date'})(type='text' placeholder='ДД.МММ - ДД.МММ')
         .ui__container
-          .ui__label
-            .h3 Subscibtion Text Field
-            .default Default
-          +field({modifier: 'subscribe'})(type='text' placeholder='Email')
+          +label({label: 'Text field', default: 'Default'})
+            +field({modifier: 'subscribe'})(type='text' placeholder='Email')
       .ui__column
         +checkbox({label:'Можно курить'})
         +checkbox({label:'Широкий коридор',text:'Ширина коридоров в номере не менее 91 см'})
@@ -94,6 +77,8 @@ html(lang="en")
         +linkList({list:[{name: 'О нас', link: '#'},{name: 'Бронировние', link: '#'},{name: 'Соглашение', link: '#'}]})
         +login({})
         +reg({})
+        +finder({})
+        +orderer({number: '888', lux: true, price: '9 990'})
     +header({})
       a.header__link.header__link_current(href="#") Home
       a.header__link(href="#") About us
