@@ -7,5 +7,5 @@ mixin user(obj)
       div(class=`${baseClass}__last-name`)=obj.lastName
   else
     div(class=`${baseClass}`)
-      +button({label:'Login', modifier: 'signin'})
-      +button({label:'Register', modifier: 'signup'})
+      +button({label:'Login', modifier: 'ghost'})
+      +button({label:'Register', modifier: 'fill'})

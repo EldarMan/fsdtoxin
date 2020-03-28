@@ -16,4 +16,6 @@ import "./components/button/button";
 import "./components/comment/comment";
 import "./components/advantage/advantage";
 import "./components/linkList/linkList";
+import "./components/login/login";
+import "./components/reg/reg";
 import "./plugins/datepicker/datepicker";

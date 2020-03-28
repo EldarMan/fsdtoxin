@@ -20,6 +20,8 @@ html(lang="en")
     include ../components/comment/comment.pug
     include ../components/advantage/advantage.pug
     include ../components/linkList/linkList.pug
+    include ../components/login/login.pug
+    include ../components/reg/reg.pug
 
     .form-elements
       .ui__column
@@ -78,10 +80,10 @@ html(lang="en")
         +bullet({label:'Без вечеринок и мероприятий'})
         +button({label:'clear'})
         +button({label:'apply', modifier: 'apply'})
-        +button({label:'sign up', modifier: 'signup'})
-        +button({label:'sign in', modifier: 'signin'})
-        +button({label:'sign up', modifier: 'signup'})
-        +button({label:'sign in', modifier: 'signin'})
+        +button({label:'sign up', modifier: 'fill'})
+        +button({label:'sign in', modifier: 'ghost'})
+        +button({label:'sign up', modifier: 'fill'})
+        +button({label:'sign in', modifier: 'ghost'})
         +button({label:'order', modifier: 'order'})
         +comment({author: 'Мурад Сарафанов',
                   date: '5 дней назад',
@@ -90,6 +92,8 @@ html(lang="en")
                   avatar:require('../components/comment/Avatar1.png').default})
         +advantage({label:'Комфорт',text:'Шумопоглощающие стены',icon: require('../components/advantage/Comfort.svg').default})
         +linkList({list:[{name: 'О нас', link: '#'},{name: 'Бронировние', link: '#'},{name: 'Соглашение', link: '#'}]})
+        +login({})
+        +reg({})
     +header({})
       a.header__link.header__link_current(href="#") Home
       a.header__link(href="#") About us
@@ -114,3 +118,4 @@ html(lang="en")
         .footer__subscribe 
           |Receive our latest news and promotions in your inbox!
         +field({modifier: 'subscribe'})(type='text' placeholder='Your email address')
+    
