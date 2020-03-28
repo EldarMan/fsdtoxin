@@ -1,0 +1,24 @@
+.label {
+  display: block;
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #1f2041;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    margin-bottom: 5px;
+  }
+  &__default {
+    color: rgba(31, 32, 65, 0.5);
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+}

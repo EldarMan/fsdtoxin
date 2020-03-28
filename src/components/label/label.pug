@@ -1,0 +1,8 @@
+mixin label(obj)
+  -const baseClass = 'label'
+  label(class=(obj && obj.addClass) ? `${baseClass} ${addClass}` : `${baseClass}`)&attributes(attributes)
+    p(class=`${baseClass}__text`)=obj.label
+      if (obj.default)
+        span(class=`${baseClass}__default`)=obj.default
+    if block 
+      block
