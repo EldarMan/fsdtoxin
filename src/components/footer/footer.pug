@@ -1,0 +1,23 @@
+mixin footer(obj)
+  footer.footer
+    if block
+      .footer__navigation
+        .footer__column
+          a.footer__logo
+          p.footer__desc=obj.text
+        block
+      .footer__bar
+        .footer__copyright
+          |Copyright © 2018 Toxin UI Kit. All rights reserved.
+        .footer__socials
+          a.footer__social.footer__social_twitter(href="twitter.com")
+          a.footer__social.footer__social_facebook(href="facebook.com")
+          a.footer__social.footer__social_instagram(href="instagram.com")
+    else
+      a.footer__logo
+      p.footer__text=obj.text
+      .footer__socials
+        a.footer__social.footer__social_twitter(href="twitter.com")
+        a.footer__social.footer__social_facebook(href="facebook.com")
+        a.footer__social.footer__social_instagram(href="instagram.com")
+      .footer__space
