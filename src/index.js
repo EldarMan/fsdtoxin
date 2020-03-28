@@ -2,6 +2,9 @@
 import "./styles/styles";
 
 // --- Components import ---
+import "./components/header/header";
+import "./components/footer/footer";
+import "./components/user/user";
 import "./components/field/field";
 import "./components/checkbox/checkbox";
 import "./components/radio/radio";

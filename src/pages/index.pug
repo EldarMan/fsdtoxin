@@ -6,6 +6,9 @@ html(lang="en")
     title Toxin | UI Kit
   body.page.ui
 
+    include ../components/header/header.pug
+    include ../components/footer/footer.pug
+    include ../components/user/user.pug
     include ../components/field/field.pug
     include ../components/checkbox/checkbox.pug
     include ../components/radio/radio.pug
@@ -87,3 +90,27 @@ html(lang="en")
                   avatar:require('../components/comment/Avatar1.png').default})
         +advantage({label:'Комфорт',text:'Шумопоглощающие стены',icon: require('../components/advantage/Comfort.svg').default})
         +linkList({list:[{name: 'О нас', link: '#'},{name: 'Бронировние', link: '#'},{name: 'Соглашение', link: '#'}]})
+    +header({})
+      a.header__link.header__link_current(href="#") Home
+      a.header__link(href="#") About us
+      a.header__link.header__link_dropdown(href="#") Services
+      a.header__link(href="#") Careers
+      a.header__link(href="#") News
+      a.header__link(href="#") Documentation
+      +user({firstName: 'Cosmin', lastName: 'Negoita'})
+    +footer({text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.'})
+    +footer({text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.'})
+      .footer__column
+        .h3 Navigation
+        +linkList({list:[{name: 'About us', link: '#'},{name: 'News', link: '#'},{name: 'Support', link: '#'},{name: 'Products', link: '#'}]})
+      .footer__column
+        .h3 About us
+        +linkList({list:[{name: 'Who we are', link: '#'},{name: 'Our team', link: '#'},{name: 'Career', link: '#'},{name: 'Investors', link: '#'}]})
+      .footer__column
+        .h3 Support
+        +linkList({list:[{name: 'Communication', link: '#'},{name: 'Comunity', link: '#'},{name: 'Get in touch', link: '#'}]})
+      .footer__column
+        .h3 Subscribe
+        .footer__subscribe 
+          |Receive our latest news and promotions in your inbox!
+        +field({modifier: 'subscribe'})(type='text' placeholder='Your email address')
