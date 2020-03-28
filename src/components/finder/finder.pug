@@ -1,0 +1,17 @@
+include ../label/label.pug
+include ../field/field.pug
+include ../button/button.pug
+mixin finder(obj)
+  -const baseClass = 'finder'
+  div(class=`${baseClass}`)
+    h1(class=`h1 ${baseClass}__title`) Найдём номера под ваши пожелания
+    div(class=`${baseClass}__date`)
+      +label({label: 'Прибытие'})
+        +field({modifier: 'date'})(type='text' placeholder='ДД.ММ.ГГГГ')
+      +label({label: 'Выезд'})
+        +field({modifier: 'date'})(type='text' placeholder='ДД.ММ.ГГГГ')
+    +label({label: 'Гости'})(class=`${baseClass}__guests`)
+      +field({modifier:'dropdown'})(type='text' placeholder='Сколько гостей')
+    +button({label:'Подобрать номер', modifier: 'order'})
+
+    
