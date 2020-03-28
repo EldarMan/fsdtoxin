@@ -1,0 +1,14 @@
+include ../field/field.pug
+include ../button/button.pug
+mixin login(obj)
+  -const baseClass = 'login'
+  div(class=`${baseClass}`)
+    h1(class=`h1 ${baseClass}__title`) Войти
+    div(class=`${baseClass}__fields`) 
+      +field({})(type='text' placeholder='Email')
+      +field({})(type='password' placeholder='Пароль')
+    +button({label:'Войти', modifier: 'order'})
+    div(class=`${baseClass}__footer`)
+      span(class=`${baseClass}__text`) Нет аккуанта на Toxin?
+      +button({label:'Создать', modifier: 'ghost'})
+    
