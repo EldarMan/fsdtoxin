@@ -1,0 +1,15 @@
+.user {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+
+  &_signed {
+    &::before {
+      content: "";
+      height: 30px;
+      width: 1px;
+      background-color: rgba(31, 32, 65, 0.1);
+      margin-right: 10px;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+include ../button/button.pug
+mixin user(obj)
+  -const baseClass = 'user'
+  if (obj && obj.firstName && obj.lastName)
+    div(class=`${baseClass} ${baseClass}_signed`)
+      div(class=`${baseClass}__first-name`)=obj.firstName
+      div(class=`${baseClass}__last-name`)=obj.lastName
+  else
+    div(class=`${baseClass}`)
+      +button({label:'Login', modifier: 'signin'})
+      +button({label:'Register', modifier: 'signup'})
