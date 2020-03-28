@@ -1,0 +1,29 @@
+include ../field/field.pug
+include ../radio/radio.pug
+include ../toggle/toggle.pug
+include ../button/button.pug
+mixin reg(obj)
+  -const baseClass = 'reg'
+  div(class=`${baseClass}`)
+    h1(class=`h1 ${baseClass}__title`) Регистрация аккуанта
+    div(class=`${baseClass}__fields`) 
+      +field({})(type='text' placeholder='Имя')
+      +field({})(type='text' placeholder='Фамилия')
+      div(class=`${baseClass}__sex`)
+        +radio({label:'Мужчина'})(name='sex')
+        +radio({label:'Женщина'})(name='sex')
+    label(class=`${baseClass}__container`) 
+      p(class=`${baseClass}__label`) Дата рождения
+      +field({})(type='text' placeholder='ДД.ММ.ГГГГ')
+    label(class=`${baseClass}__container`) 
+      p(class=`${baseClass}__label`) Данные для входа в сервис
+      div(class=`${baseClass}__fields`) 
+        +field({})(type='text' placeholder='Email')
+        +field({})(type='password' placeholder='Пароль')
+        +toggle({label:'Получать спецпредложения'})
+    +button({label:'Перейти к оплате', modifier: 'order'})
+    div(class=`${baseClass}__footer`)
+      span(class=`${baseClass}__text`) Уже есть аккуант на Toxin?
+      +button({label:'Войти', modifier: 'ghost'})
+
+    
