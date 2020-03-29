@@ -1,0 +1,7 @@
+mixin rangeSlider(obj)
+  -const baseClass = 'range-slider'
+  div(class=`${baseClass}`)
+    input(class=`${baseClass}__input` type='text')&attributes(attributes)
+    div(class=`${baseClass}__slider`)
+      div(class=`${baseClass}__range`)
+      button(class=`${baseClass}__controller`)

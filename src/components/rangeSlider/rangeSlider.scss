@@ -1,0 +1,29 @@
+.range-slider {
+  &__slider {
+    position: relative;
+    height: 6px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  &__range {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    height: 6px;
+    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+    border-radius: 3px;
+  }
+  &__controller {
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin: 0;
+    border: 2px solid #ffffff;
+    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+    border-radius: 10px;
+  }
+}
