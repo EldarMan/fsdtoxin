@@ -21,4 +21,5 @@ import "./components/login/login";
 import "./components/reg/reg";
 import "./components/finder/finder";
 import "./components/orderer/orderer";
+import "./components/rangeSlider/rangeSlider";
 import "./plugins/datepicker/datepicker";

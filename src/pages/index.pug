@@ -25,60 +25,64 @@ html(lang="en")
     include ../components/reg/reg.pug
     include ../components/finder/finder.pug
     include ../components/orderer/orderer.pug
+    include ../components/rangeSlider/rangeSlider.pug
 
-    .form-elements
-      .ui__column
+
+    .ui__colors
+
+    .ui__column
+      +rangeSlider()
+      +label({label: 'Text field', default: 'Default'})
+        +field({})(type='text' placeholder='Email')
+      +label({label: 'Text field', default: 'Default'})
+        +field({})(type='text' placeholder='Email')
+      +label({label: 'Text field', default: 'Default'})
+        +field({modifier:'dropdown'})(type='text' placeholder='Сколько гостей')
+      +label({label: 'Text field', default: 'Default'})
+        +field({})(type='text' placeholder='ДД.ММ.ГГГГ')
+      .ui__container.ui__row
         +label({label: 'Text field', default: 'Default'})
-          +field({})(type='text' placeholder='Email')
+          +field({modifier: 'date'})(type='text' placeholder='ДД.ММ.ГГГГ')
         +label({label: 'Text field', default: 'Default'})
-          +field({})(type='text' placeholder='Email')
+          +field({modifier: 'date'})(type='text' placeholder='ДД.ММ.ГГГГ')
+    .ui__column.ui__column_small
+      .ui__container
         +label({label: 'Text field', default: 'Default'})
-          +field({modifier:'dropdown'})(type='text' placeholder='Сколько гостей')
+          +field({modifier: 'date'})(type='text' placeholder='ДД.МММ - ДД.МММ')
+      .ui__container
         +label({label: 'Text field', default: 'Default'})
-          +field({})(type='text' placeholder='ДД.ММ.ГГГГ')
-        .ui__container.ui__row
-          +label({label: 'Text field', default: 'Default'})
-            +field({modifier: 'date'})(type='text' placeholder='ДД.ММ.ГГГГ')
-          +label({label: 'Text field', default: 'Default'})
-            +field({modifier: 'date'})(type='text' placeholder='ДД.ММ.ГГГГ')
-      .ui__column.ui__column_small
-        .ui__container
-          +label({label: 'Text field', default: 'Default'})
-            +field({modifier: 'date'})(type='text' placeholder='ДД.МММ - ДД.МММ')
-        .ui__container
-          +label({label: 'Text field', default: 'Default'})
-            +field({modifier: 'subscribe'})(type='text' placeholder='Email')
-      .ui__column
-        +checkbox({label:'Можно курить'})
-        +checkbox({label:'Широкий коридор',text:'Ширина коридоров в номере не менее 91 см'})
-        +radio({label:'Мужчина'})(name='sex')
-        +radio({label:'Женщина'})(name='sex')
-        +toggle({label:'Получать уведомления'})
-        +toggle({label:'Получать спецпредложения'})
-        +like({num:'2'})
-        +like({num:'12'})(checked=true)
-        +rate({num:'5'})
-        +rate({num:'4'})
-        +bullet({label:'Нельзя с питомцами'})
-        +bullet({label:'Без вечеринок и мероприятий'})
-        +button({label:'clear'})
-        +button({label:'apply', modifier: 'apply'})
-        +button({label:'sign up', modifier: 'fill'})
-        +button({label:'sign in', modifier: 'ghost'})
-        +button({label:'sign up', modifier: 'fill'})
-        +button({label:'sign in', modifier: 'ghost'})
-        +button({label:'order', modifier: 'order'})
-        +comment({author: 'Мурад Сарафанов',
-                  date: '5 дней назад',
-                  text:'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
-                  likes: '2',
-                  avatar:require('../components/comment/Avatar1.png').default})
-        +advantage({label:'Комфорт',text:'Шумопоглощающие стены',icon: require('../components/advantage/Comfort.svg').default})
-        +linkList({list:[{name: 'О нас', link: '#'},{name: 'Бронировние', link: '#'},{name: 'Соглашение', link: '#'}]})
-        +login({})
-        +reg({})
-        +finder({})
-        +orderer({number: '888', lux: true, price: '9 990'})
+          +field({modifier: 'subscribe'})(type='text' placeholder='Email')
+    .ui__column
+      +checkbox({label:'Можно курить'})
+      +checkbox({label:'Широкий коридор',text:'Ширина коридоров в номере не менее 91 см'})
+      +radio({label:'Мужчина'})(name='sex')
+      +radio({label:'Женщина'})(name='sex')
+      +toggle({label:'Получать уведомления'})
+      +toggle({label:'Получать спецпредложения'})
+      +like({num:'2'})
+      +like({num:'12'})(checked=true)
+      +rate({num:'5'})
+      +rate({num:'4'})
+      +bullet({label:'Нельзя с питомцами'})
+      +bullet({label:'Без вечеринок и мероприятий'})
+      +button({label:'clear'})
+      +button({label:'apply', modifier: 'apply'})
+      +button({label:'sign up', modifier: 'fill'})
+      +button({label:'sign in', modifier: 'ghost'})
+      +button({label:'sign up', modifier: 'fill'})
+      +button({label:'sign in', modifier: 'ghost'})
+      +button({label:'order', modifier: 'order'})
+      +comment({author: 'Мурад Сарафанов',
+                date: '5 дней назад',
+                text:'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+                likes: '2',
+                avatar:require('../components/comment/Avatar1.png').default})
+      +advantage({label:'Комфорт',text:'Шумопоглощающие стены',icon: require('../components/advantage/Comfort.svg').default})
+      +linkList({list:[{name: 'О нас', link: '#'},{name: 'Бронировние', link: '#'},{name: 'Соглашение', link: '#'}]})
+      +login({})
+      +reg({})
+      +finder({})
+      +orderer({number: '888', lux: true, price: '9 990'})
     +header({})
       a.header__link.header__link_current(href="#") Home
       a.header__link(href="#") About us
