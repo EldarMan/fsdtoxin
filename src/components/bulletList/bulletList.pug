@@ -1,0 +1,7 @@
+include ../bullet/bullet.pug
+mixin bulletList(obj)
+  - let baseClass = 'bullet-list';
+  ul(class=`${baseClass}`)
+    each item in obj.items
+      li
+        +bullet({label: item.label})
