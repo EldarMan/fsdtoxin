@@ -1,0 +1,14 @@
+mixin paginator(obj)
+  -const baseClass = 'paginator'
+  div(class=`${baseClass}`)
+    div(class=`${baseClass}__pages`)
+      button(class=`${baseClass}__btn ${baseClass}__btn_prev`)
+        include ./arrow.svg
+      ul(class=`${baseClass}__list`)
+        each page in obj.pages
+          li(class=page.modifier ? `${baseClass}__page ${baseClass}__page_${page.modifier}` : `${baseClass}__page`)
+            a(class=`${baseClass}__link` href=`${page.num}`)=page.num
+      button(class=`${baseClass}__btn ${baseClass}__btn_next`)
+        include ./arrow.svg
+    p(class=`${baseClass}__text`)=obj.text
+    

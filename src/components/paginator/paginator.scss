@@ -1,0 +1,51 @@
+.paginator {
+  &__pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__btn {
+    width: 40px;
+    height: 40px;
+    font-size: 0;
+    border: none;
+    border-radius: 22px;
+
+    &_prev {
+      transform: rotate(180deg);
+      background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+    }
+    &_next {
+      background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__page {
+    color: rgba(31, 32, 65, 0.5);
+    font-family: "Montserrat";
+    font-weight: normal;
+    font-size: 12px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 22px;
+    &_current {
+      color: #fff;
+      font-weight: bold;
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    }
+  }
+  &__text {
+    color: rgba(31, 32, 65, 0.75);
+    font-family: "Montserrat";
+    font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
