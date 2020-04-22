@@ -1,0 +1,7 @@
+include ../checkbox/checkbox.pug
+mixin checkboxList(obj)
+  - let baseClass = 'checkbox-list';
+  ul(class=`${baseClass}`)
+    each item in obj.items
+      li
+        +checkbox({label: item.label, text: item.text})
