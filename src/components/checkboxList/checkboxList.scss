@@ -1,0 +1,15 @@
+.checkbox-list {
+  &__title {
+    cursor: pointer;
+  }
+  &__list {
+    &_expanded {
+      overflow: hidden;
+      max-height: auto;
+    }
+    &_collapsed {
+      overflow: hidden;
+      max-height: 0;
+    }
+  }
+}

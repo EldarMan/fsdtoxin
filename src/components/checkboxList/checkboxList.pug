@@ -1,7 +1,9 @@
 include ../checkbox/checkbox.pug
 mixin checkboxList(obj)
   - let baseClass = 'checkbox-list';
-  ul(class=`${baseClass}`)
-    each item in obj.items
-      li
-        +checkbox({label: item.label, text: item.text})
+  div(class=obj.modifier ? `${baseClass} ${baseClass}_${obj.modifier}` : `${baseClass}`)
+    h3(class=`${baseClass}__title`)=obj.title
+    ul(class=`${baseClass}__list`)
+      each item in obj.items
+        li
+          +checkbox({label: item.label, text: item.text})
